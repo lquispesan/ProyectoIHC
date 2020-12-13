@@ -51,3 +51,39 @@ class AlumnoDeleteView(DeleteView):
 		context = super().get_context_data(**kwargs)
 		context['title'] = 'Eliminación de Registro'
 		return context
+
+def graphics(request):
+	data = {
+		'title': "Gráficas",
+	}
+	return render(request, 'graficas/list.html', data)
+
+def graphics_g1(request):
+	data = {
+
+	}
+	return render(request, 'graficas/graphic1.html', data)
+
+def graphics_g2(request):
+	data = {
+
+	}
+	return render(request, 'graficas/graphic2.html', data)
+
+def graphics_g3(request):
+	data = {
+
+	}
+	return render(request, 'graficas/graphic3.html', data)
+
+def graphics_g4(request):
+	data = {
+
+	}
+	return render(request, 'graficas/graphic4.html', data)
+
+def graphics_g5(request):
+	data = {
+
+	}
+	return render(request, 'graficas/graphic5.html', data)				

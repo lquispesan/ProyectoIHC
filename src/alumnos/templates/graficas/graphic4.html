@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month',       'Matematicas', 'Lenguaje', 'Ciencias',    'Artes',      'Conducta', 'Promedio'],
+          ['Marzo-2020',      15,        38,          5,              15,           10,      15.6],
+          ['Abril-2020',      15,        10,          9,              18,           18,      12],
+          ['Mayo-2020',       17,        17,          17,             17,           17,      17],
+          ['Junio-2020',      19,        10,          15,             28,           25,      22],
+          ['Julio-2020',      16,        11,          29,             16,           16,      21],
+          ['Agosto-2020',     16,        15,          5,              12,           16,      12],
+          ['Septiembre-2020', 13,        21,          19,             26,           6,       16],
+          ['Octubre-2020',    16,        31,          39,             16,           8,       29],
+          ['Noviembre-2020',  19,        11,          19,             16,           21,      18],
+          ['Diciembre-2020',  11,        10,          0,              16,           22,      10],
+        ]);
+
+        var options = {
+          title : 'Menores de edad con problemas de aprendizaje en diversos cursos por mes',
+          vAxis: {title: 'Cups'},
+          hAxis: {title: 'Month'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

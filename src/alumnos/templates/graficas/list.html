@@ -1,0 +1,23 @@
+{% extends "body.html" %}
+ 
+{% block content %}
+<table>
+	<tr>
+		<td style="padding: 10px;"><a href="{% url 'alumnos:graphic1' %}" target="iframe_a">grafica1</a></td>
+		<td style="padding: 10px;"><a href="{% url 'alumnos:graphic2' %}" target="iframe_a">grafica2</a></td>
+		<td style="padding: 10px;"><a href="{% url 'alumnos:graphic3' %}" target="iframe_a">grafica3</a></td>
+		<td style="padding: 10px;"><a href="{% url 'alumnos:graphic4' %}" target="iframe_a">grafica4</a></td>
+		<td style="padding: 10px;"><a href="{% url 'alumnos:graphic5' %}" target="iframe_a">grafica5</a></td>
+	</tr>
+
+
+</table>
+
+
+
+
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="{% url 'alumnos:graphic1' %}" allowfullscreen name="iframe_a"></iframe>
+</div>
+{% endblock %}
